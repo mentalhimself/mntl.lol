@@ -20,7 +20,43 @@
 
 }
 
-
+.page-footer {
+  margin-bottom: 290;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'MinecraftiaRegular';
+  font-size: 13px;
+  bottom: 0;
+  right: 25%;
+  left: 50%;
+  margin-left: -59px;
+  position: absolute;
+}
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block
+}
+.thovers.thover {
+  color: #929292;
+}
+.thovers.thover:hover {
+  animation-name: cc-white;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+@keyframes cc-white {
+  from {color: #929292;}
+  to {color: white;}
+}
+.thovers.thover:not(:hover) {
+  animation-name: cc-gray;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+@keyframes cc-gray {
+  from {color: white;}
+  to {color: #929292;}
+}
 
 html {
 
