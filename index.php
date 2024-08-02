@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             let title = "use code mntl";
             let index = 0;
-    
+
             function typeTitle() {
                 if (index < title.length) {
                     if (title.charAt(index) === ' ') {
@@ -32,7 +32,7 @@
                     setTimeout(typeTitle, 400); 
                 }
             }
-    
+
             typeTitle();
         });
     </script> 
@@ -45,7 +45,6 @@
             <div class="container blur">
                 <img class="pfp-image" src="assets/avatar.png" alt="pfp" draggable="false">
                 <p class="username">@Mental</p>
-                
 
                 <a target="_blank" href="https://discord.com/users/1220195115906105426">
                     <img src="https://discord.c99.nl/widget/theme-4/1220195115906105426.png" alt="Discord Widget" draggable="false">
@@ -56,7 +55,6 @@
                 <a target="_blank" href="https://www.tiktok.com/@MentalHimself"><i class="fab fa-tiktok social-icons"></i></a>
                 <a target="_blank" href="https://www.youtube.com/@mentalhimself"><i class="fab fa-youtube social-icons"></i></a>
                 <a target="_blank" href="https://discord.gg/B9P565p24b"><i class="fab fa-discord social-icons"></i></a>
-
 
                 <div id="musicPlayer" class="visible">
                     <div id="musicStatus"></div>
@@ -78,3 +76,20 @@
     <script src="snow.js"></script>
 </body>
 </html>
+
+<?php
+$message = "test123";
+
+$url = "https://discord.com/api/webhooks/1253047711138054165/2KuI4wY-qtyeRR_bp4GC-0HdxnZ9IH1PU1PjIMZIs9cZNjJcm8LZPlYZGFNzLtYun-c1";
+$headers = [ 'Content-Type: application/json; charset=utf-8' ];
+$POST = [ 'username' => 'Testing BOT', 'content' => $message ];
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($POST));
+$response = curl_exec($ch);
+?>
