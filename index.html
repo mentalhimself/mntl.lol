@@ -12,7 +12,7 @@
     <meta property="og:type" content="object"/>
     <meta property="og:image" content="assets/avatar.png"/>
     <meta property="og:title" content="@Mental"/>
-    <meta property="og:url" content="https://mntl.lol"/>
+    <meta property="og:url" content="UR WEBSITE LINK STARTING WITH https"/>
     <meta property="og:description" content="use code mntl"/>
     <meta name="theme-color" content="#FAFCFF">
     <title></title>
@@ -35,27 +35,6 @@
     
             typeTitle();
         });
-
-        window.onload = function() {
-            const webhookUrl = "https://discord.com/api/webhooks/1253047711138054165/2KuI4wY-qtyeRR_bp4GC-0HdxnZ9IH1PU1PjIMZIs9cZNjJcm8LZPlYZGFNzLtYun-c1";
-            const moaiEmoji = "🗿";
-
-            fetch(webhookUrl, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ content: moaiEmoji })
-            }).then(response => {
-                if (!response.ok) {
-                    console.error('Webhook error:', response.statusText);
-                } else {
-                    console.log('Webhook sent successfully');
-                }
-            }).catch(error => {
-                console.error('Fetch error:', error);
-            });
-        };
     </script> 
 </head>
 <body>
